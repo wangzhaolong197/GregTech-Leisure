@@ -112,7 +112,9 @@
 			y: 3.5d
 		}
 		{
+			description: [""]
 			id: "14209D80FDC6E345"
+			subtitle: "镧系"
 			tasks: [{
 				id: "2B3F28347CCD30C3"
 				item: "gtceu:scandium_dust"
@@ -122,7 +124,9 @@
 			y: 0.5d
 		}
 		{
+			description: [""]
 			id: "357E591730EEF669"
+			subtitle: "镧系"
 			tasks: [{
 				id: "26B66993E8078558"
 				item: "gtceu:yttrium_dust"
@@ -242,7 +246,9 @@
 			y: 0.5d
 		}
 		{
+			description: [""]
 			id: "44A5D6AC59C63BDD"
+			subtitle: "来自  贫金辉钼矿粉——钼烟气"
 			tasks: [{
 				id: "24E91EDFE5B69E05"
 				item: "gtceu:rhenium_dust"
@@ -453,6 +459,7 @@
 		}
 		{
 			id: "309EED143032AA97"
+			subtitle: "灰烬处理"
 			tasks: [{
 				id: "31AFE094EC8C2F36"
 				item: "gtceu:germanium_dust"
@@ -555,6 +562,7 @@
 		}
 		{
 			id: "2AB2A94A8CF0D2F1"
+			subtitle: "凯金化合物处理"
 			tasks: [{
 				id: "7F924702B34F3E4C"
 				item: "gtceu:selenium_dust"
@@ -565,6 +573,7 @@
 		}
 		{
 			id: "72C3142FD00BD233"
+			subtitle: "大虚采 随机"
 			tasks: [{
 				id: "46A1627C5749E725"
 				item: "gtceu:tellurium_dust"
@@ -575,6 +584,7 @@
 		}
 		{
 			id: "67E6150716FDD844"
+			subtitle: "核废料"
 			tasks: [{
 				id: "30A4D869FBBD2AA3"
 				item: "gtceu:polonium_dust"
@@ -607,6 +617,7 @@
 		}
 		{
 			id: "1B19C13BC2E4D93C"
+			subtitle: "海带提取"
 			tasks: [{
 				id: "6E8D2E1843C9030E"
 				item: "gtceu:iodine_dust"
@@ -963,6 +974,7 @@
 		}
 		{
 			id: "40F3F08084CA76B3"
+			subtitle: "大虚采 随机"
 			tasks: [{
 				id: "3B1BE76E83DAEC09"
 				item: "gtceu:rubidium_dust"
@@ -973,6 +985,7 @@
 		}
 		{
 			id: "44BF685B3D715510"
+			subtitle: "凯金化合物处理"
 			tasks: [{
 				id: "28043528E4F4D5F9"
 				item: "gtceu:francium_dust"
@@ -993,6 +1006,7 @@
 		}
 		{
 			id: "57B6DC1C5674CA9C"
+			subtitle: "硫酸铀废液"
 			tasks: [{
 				id: "590122A92DB32EE0"
 				item: "gtceu:radium_dust"
@@ -1174,6 +1188,7 @@
 		}
 		{
 			id: "052DDE864EDC3DDF"
+			subtitle: "蒸发 卤水"
 			tasks: [{
 				amount: 1000L
 				fluid: "gtceu:bromine"
@@ -1185,6 +1200,7 @@
 		}
 		{
 			id: "55B6423CC74CA428"
+			subtitle: "凯金化合物处理"
 			tasks: [{
 				id: "5DB22AFCE1AFA3E6"
 				item: "gtceu:astatine_dust"

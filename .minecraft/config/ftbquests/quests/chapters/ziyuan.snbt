@@ -1937,7 +1937,7 @@
 				"0611E972C84FDC4B"
 			]
 			dependency_requirement: "one_started"
-			description: ["你可以从钕矿石，独居石，氟碳镧铈甚至红石中获取它。"]
+			description: [""]
 			hide_dependency_lines: true
 			id: "6B71EE1A869ABCD5"
 			tasks: [{

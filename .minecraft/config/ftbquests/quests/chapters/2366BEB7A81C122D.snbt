@@ -10,8 +10,8 @@
 		{
 			id: "23C44004B0D7572C"
 			linked_quest: "73C70C42B7EF5D4F"
-			x: 0.0d
-			y: 6.0d
+			x: 2.0d
+			y: 2.0d
 		}
 		{
 			id: "3F71D8E597D26019"
@@ -259,7 +259,6 @@
 				"64EAB77978C87CE9"
 				"1B548589C6044A63"
 				"1223F5F9BF7FF37F"
-				"333B741B06E49CE8"
 			]
 			id: "21CF5BE902E89B8A"
 			tasks: [{
@@ -279,7 +278,7 @@
 				item: "gtlcore:assembler_module"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 0.0d
 			y: 6.0d
 		}
 		{
@@ -302,7 +301,7 @@
 				item: "gtlcore:space_drone_mk1"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 6.0d
 		}
 		{
@@ -370,6 +369,8 @@
 			dependencies: [
 				"7ADB50ACF5AE1D13"
 				"6D83BAAC7DB34D51"
+				"776563C5BA327495"
+				"333B741B06E49CE8"
 			]
 			description: ["外星生命"]
 			id: "1B548589C6044A63"
@@ -512,7 +513,7 @@
 				title: "不明液体"
 				type: "checkmark"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 6.0d
 		}
 		{
@@ -617,7 +618,7 @@
 			y: 12.0d
 		}
 		{
-			dependencies: ["7C23CC6ADDC33EA0"]
+			dependencies: ["035C470213E8B4DB"]
 			description: ["大硅岩~~狠狠发电~~"]
 			id: "09E013C97E05C052"
 			tasks: [{
@@ -625,8 +626,8 @@
 				item: "gtlcore:large_naquadah_reactor"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 2.0d
+			x: 6.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["7204F1B6BCC74F1C"]
@@ -638,6 +639,17 @@
 			}]
 			x: 12.0d
 			y: 6.0d
+		}
+		{
+			description: ["从灰烬中提取锗"]
+			id: "243C69B838FB98FA"
+			tasks: [{
+				id: "583B4C245FDEB985"
+				item: "gtceu:germanium_dust"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 10.0d
 		}
 	]
 	subtitle: ["Tier8-UV"]

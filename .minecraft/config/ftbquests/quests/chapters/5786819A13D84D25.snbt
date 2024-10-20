@@ -673,8 +673,8 @@
 				item: "gtlcore:rare_earth_centrifugal"
 				type: "item"
 			}]
-			x: -4.0d
-			y: 0.0d
+			x: -2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["7C23CC6ADDC33EA0"]
@@ -799,6 +799,16 @@
 			}]
 			x: 10.0d
 			y: 8.0d
+		}
+		{
+			id: "1A9B4990032C5F06"
+			tasks: [{
+				id: "2C9C439E7763C4DD"
+				item: "gtceu:fluxed_electrum_ingot"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Tier9-UHV"]

@@ -1077,7 +1077,11 @@
 		}
 		{
 			dependencies: ["51B9A72C19F84F0E"]
-			description: ["注意没有流体隔离，如果需要，你可以去找GTM实现"]
+			description: [
+				"注意没有流体隔离，如果需要，你可以去找GTM实现"
+				""
+				"不是所有机器都能用总成的！"
+			]
 			hide_dependency_lines: true
 			id: "62A978538C87ED8A"
 			rewards: [

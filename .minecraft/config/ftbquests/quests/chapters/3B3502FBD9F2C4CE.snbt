@@ -800,6 +800,17 @@
 			x: 14.0d
 			y: 8.0d
 		}
+		{
+			description: ["从海带中提取碘"]
+			id: "29FEDE6E5BC31C3B"
+			tasks: [{
+				id: "5CA8537F83E6D9BB"
+				item: "gtceu:iodine_dust"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 10.0d
+		}
 	]
 	subtitle: ["Tier5-IV"]
 	title: "强导压"

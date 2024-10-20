@@ -169,7 +169,7 @@
 				item: "gtceu:steam_large_turbine"
 				type: "item"
 			}]
-			x: 5.0d
+			x: 3.5d
 			y: -0.5d
 		}
 		{
@@ -525,7 +525,7 @@
 			description: ["每次成功的雷击会填充1/4的能量"]
 			id: "45656BC02DC740CE"
 			tasks: [{
-				id: "06C3B482C2FC633D"
+				id: "11BBDF10AD954709"
 				item: "gtlcore:ev_lightning_rod"
 				type: "item"
 			}]

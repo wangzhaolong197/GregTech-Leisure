@@ -173,7 +173,7 @@
 			dependencies: ["7C4AD33299386B47"]
 			id: "4C37CB772835CFD0"
 			tasks: [{
-				id: "2250D79F24AF553E"
+				id: "3456609519072452"
 				item: "gtlcore:command_block_broken"
 				type: "item"
 			}]

@@ -47,11 +47,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "0FEF16DD8A55FB39"
-				item: {
-					Count: 1
-					id: "ad_astra:tier_1_rocket"
-					tag: { }
-				}
+				item: "ad_astra:tier_1_rocket"
 				type: "item"
 			}]
 			x: 7.0d
@@ -141,11 +137,7 @@
 			id: "0D865B38481F3106"
 			rewards: [{
 				id: "29C4EDC665FC5FB6"
-				item: {
-					Count: 1
-					id: "avaritia:infinity_bow"
-					tag: { }
-				}
+				item: "avaritia:infinity_bow"
 				type: "item"
 			}]
 			tasks: [
@@ -295,11 +287,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "1BF49A9E58E5AB03"
-				item: {
-					Count: 1
-					id: "ad_astra:tier_2_rocket"
-					tag: { }
-				}
+				item: "ad_astra:tier_2_rocket"
 				type: "item"
 			}]
 			x: 15.0d
@@ -473,11 +461,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "55C77A386AC3C452"
-				item: {
-					Count: 1
-					id: "ad_astra:tier_3_rocket"
-					tag: { }
-				}
+				item: "ad_astra:tier_3_rocket"
 				type: "item"
 			}]
 			x: 25.0d
@@ -736,11 +720,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2204C487CC933D37"
-				item: {
-					Count: 1
-					id: "ad_astra:tier_4_rocket"
-					tag: { }
-				}
+				item: "ad_astra:tier_4_rocket"
 				type: "item"
 			}]
 			x: 36.0d
@@ -1538,7 +1518,7 @@
 			description: ["左手手持末地数据，右手末地之眼，各消耗一个点亮一次"]
 			id: "2AE3DE0BC3CD1D5B"
 			tasks: [{
-				id: "0F4C07DD6A1BB112"
+				id: "387755712398BEE6"
 				item: "kubejs:end_data"
 				type: "item"
 			}]

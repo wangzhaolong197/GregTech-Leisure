@@ -27,6 +27,11 @@
             "required": true
         },
         {
+            "fileID": 5629578,
+            "projectID": 441647,
+            "required": true
+        },
+        {
             "fileID": 5226922,
             "projectID": 957920,
             "required": true
@@ -34,11 +39,6 @@
         {
             "fileID": 5776962,
             "projectID": 324717,
-            "required": true
-        },
-        {
-            "fileID": 5057220,
-            "projectID": 240630,
             "required": true
         },
         {
@@ -157,6 +157,11 @@
             "required": true
         },
         {
+            "fileID": 5793030,
+            "projectID": 580555,
+            "required": true
+        },
+        {
             "fileID": 4810975,
             "projectID": 429235,
             "required": true
@@ -177,7 +182,7 @@
             "required": true
         },
         {
-            "fileID": 5543955,
+            "fileID": 5816794,
             "projectID": 289412,
             "required": true
         },
@@ -207,7 +212,7 @@
             "required": true
         },
         {
-            "fileID": 5808128,
+            "fileID": 5812598,
             "projectID": 890405,
             "required": true
         },
@@ -247,12 +252,12 @@
             "required": true
         },
         {
-            "fileID": 5806044,
+            "fileID": 5819331,
             "projectID": 626676,
             "required": true
         },
         {
-            "fileID": 5741238,
+            "fileID": 5819684,
             "projectID": 1028068,
             "required": true
         },
@@ -312,8 +317,23 @@
             "required": true
         },
         {
+            "fileID": 5787630,
+            "projectID": 422301,
+            "required": true
+        },
+        {
+            "fileID": 5801688,
+            "projectID": 618298,
+            "required": true
+        },
+        {
             "fileID": 4903415,
             "projectID": 664224,
+            "required": true
+        },
+        {
+            "fileID": 5558163,
+            "projectID": 694231,
             "required": true
         }
     ],
@@ -322,7 +342,7 @@
     "minecraft": {
         "modLoaders": [
             {
-                "id": "forge-47.3.7",
+                "id": "forge-47.3.11",
                 "primary": true
             }
         ],
@@ -330,5 +350,5 @@
     },
     "name": "GregTech Leisure",
     "overrides": ".minecraft",
-    "version": "1.4.3.1"
+    "version": "2.0-developing"
 }

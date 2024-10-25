@@ -1,5 +1,6 @@
 //priority: 96
 ServerEvents.recipes((event) => {
+    event.replaceInput({ id: "gtceu:shaped/steam_alloy_smelter_bronze" }, "minecraft:furnace", "enderio:primitive_alloy_smelter")
     event.shapeless(Registries.getItemStack("gtceu:small_flint_dust", 3), "gtceu:flint_dust")
     event.shapeless(Registries.getItemStack("gtceu:tiny_flint_dust", 2), "gtceu:small_flint_dust")
     event.shapeless("gtlcore:cfg_copy", "minecraft:writable_book")
@@ -65,7 +66,7 @@ ServerEvents.recipes((event) => {
     ], {
         A: "gtceu:steel_plate",
         C: "gtceu:gold_plate",
-        D: "gtceu:pulsating_alloy_block"
+        D: "enderio:pulsating_alloy_block"
     })
 
     event.shaped("minecraft:heart_of_the_sea", [
@@ -1066,30 +1067,6 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(200)
 
-    gtr.alloy_smelter("gtlcore:pulsating_alloy_ingot")
-        .itemInputs("minecraft:iron_ingot", "minecraft:gunpowder")
-        .itemOutputs("gtceu:pulsating_alloy_ingot")
-        .EUt(16)
-        .duration(80)
-
-    gtr.alloy_smelter("gtlcore:conductive_alloy_ingot")
-        .itemInputs("gtceu:pulsating_alloy_ingot", "minecraft:redstone")
-        .itemOutputs("gtceu:conductive_alloy_ingot")
-        .EUt(16)
-        .duration(160)
-
-    gtr.mixer("gtlcore:vibrant_alloy_dust")
-        .itemInputs("#forge:dusts/energetic_alloy", "#forge:dusts/ender_pearl")
-        .itemOutputs("2x gtceu:vibrant_alloy_dust")
-        .duration(260)
-        .EUt(30)
-
-    gtr.mixer("gtlcore:energetic_alloy_dust")
-        .itemInputs("2x #forge:dusts/gold", "#forge:dusts/redstone", "#forge:dusts/glowstone")
-        .itemOutputs("4x gtceu:energetic_alloy_dust")
-        .duration(140)
-        .EUt(30)
-
     const machine_materialas = [
         ["uhv", "europium", "1966080", "uv", "128", "gtlcore:nm_chip"],
         ["uev", "mithril", "7864320", "uhv", "256", "gtlcore:nm_chip"],
@@ -1530,7 +1507,7 @@ ServerEvents.recipes((event) => {
             "16x gtceu:double_black_steel_plate",
             "16x gtceu:double_niobium_nitride_plate")
         .itemOutputs("gtlcore:large_void_miner")
-        .inputFluids("gtceu:soldering_alloy 5760", "gtceu:fall_king 5760", "gtceu:energetic_alloy 5760", "gtceu:tanmolyium 5760")
+        .inputFluids("gtceu:soldering_alloy 5760", "gtceu:fall_king 5760", "gtceu:conductive_alloy 5760", "gtceu:tanmolyium 5760")
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(800)
         .stationResearch(b => b.researchStack(Registries.getItemStack("gtlcore:void_miner"))
@@ -2043,7 +2020,7 @@ ServerEvents.recipes((event) => {
             .CWUt(8192))
 
     gtr.assembly_line("gtlcore:leptonic_charge")
-        .itemInputs("gtceu:enriched_naquadah_frame", "gtceu:naquadriatictaranium_rod", "gtceu:double_uranium_235_plate", "gtceu:hexanitrohexaaxaisowurtzitane_dust", "gtceu:degenerate_rhenium_dust", "gtceu:protactinium_dust", "gtceu:mendelevium_dust", "2x gtceu:mithril_foil", "6x gtceu:orichalcum_bolt", "gtceu:enderium_plate", "gtceu:vibranium_plate")
+        .itemInputs("gtceu:enriched_naquadah_frame", "gtceu:industrial_tnt", "gtceu:naquadriatictaranium_rod", "gtceu:double_uranium_235_plate", "gtceu:hexanitrohexaaxaisowurtzitane_dust", "gtceu:degenerate_rhenium_dust", "gtceu:protactinium_dust", "gtceu:mendelevium_dust", "2x gtceu:mithril_foil", "6x gtceu:orichalcum_bolt", "gtceu:enderium_plate", "gtceu:vibranium_plate")
         .inputFluids("gtceu:mutated_living_solder 1000", "gtceu:glyceryl_trinitrate 1000", "gtceu:stellar_energy_rocket_fuel 1000", "gtceu:free_electron_gas 1000")
         .itemOutputs("gtlcore:leptonic_charge")
         .EUt(GTValues.VA[GTValues.UIV])
@@ -3431,12 +3408,14 @@ ServerEvents.recipes((event) => {
     gtr.assembler("gtlcore:ingot_field_shape")
         .itemInputs("2x gtceu:polyphenylene_sulfide_plate", "2x gtceu:polybenzimidazole_plate", "gtceu:uv_field_generator", "gtceu:ingot_casting_mold")
         .itemOutputs("kubejs:ingot_field_shape")
+        .inputFluids("gtceu:redstone_alloy 2304")
         .EUt(30720)
         .duration(200)
 
     gtr.assembler("gtlcore:ball_field_shape")
         .itemInputs("2x gtceu:polyphenylene_sulfide_plate", "2x gtceu:polybenzimidazole_plate", "gtceu:uv_field_generator", "gtceu:ball_casting_mold")
         .itemOutputs("kubejs:ball_field_shape")
+        .inputFluids("gtceu:redstone_alloy 2304")
         .EUt(30720)
         .duration(200)
 
@@ -3651,33 +3630,14 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1200)
 
-    gtr.bedrock_drilling_rig("gtlcore:bedrock_dust_1")
-        .chancedInput("gtlcore:bedrock_drill", 10, 0)
-        .itemOutputs("gtceu:bedrock_dust")
-        .EUt(GTValues.VA[GTValues.UEV])
-        .circuit(1)
-        .duration(200)
-
-    gtr.bedrock_drilling_rig("gtlcore:bedrock_dust_2")
-        .chancedInput("4x gtlcore:bedrock_drill", 10, 0)
-        .itemOutputs("4x gtceu:bedrock_dust")
-        .EUt(GTValues.VA[GTValues.UEV])
-        .circuit(2)
-        .duration(400)
-
-    gtr.bedrock_drilling_rig("gtlcore:bedrock_dust_3")
-        .chancedInput("16x gtlcore:bedrock_drill", 10, 0)
-        .itemOutputs("16x gtceu:bedrock_dust")
-        .EUt(GTValues.VA[GTValues.UEV])
-        .circuit(3)
-        .duration(800)
-
-    gtr.bedrock_drilling_rig("gtlcore:bedrock_dust_4")
-        .chancedInput("64x gtlcore:bedrock_drill", 10, 0)
-        .itemOutputs("64x gtceu:bedrock_dust")
-        .EUt(GTValues.VA[GTValues.UEV])
-        .circuit(4)
-        .duration(1600)
+    for (let index = 0; index < 8; index++) {
+        gtr.bedrock_drilling_rig("gtlcore:bedrock_dust_" + index)
+            .chancedInput(Math.pow(4, index) + "x gtlcore:bedrock_drill", 10, 0)
+            .itemOutputs(Math.pow(4, index) + "x gtceu:bedrock_dust")
+            .EUt(GTValues.VA[GTValues.UEV])
+            .circuit(index + 1)
+            .duration(200 * Math.pow(2, index))
+    }
 
     gtr.vacuum_freezer("gtlcore:liquid_hydrogen")
         .inputFluids("gtceu:hydrogen 1000")
@@ -4118,14 +4078,14 @@ ServerEvents.recipes((event) => {
         .duration(80)
 
     gtr.mixer("gtlcore:znfealcl_catalyst_dust")
-        .itemInputs("gtceu:zinc_dust", "gtceu:iron_dust", "gtceu:aluminium_dust")
+        .itemInputs("gtceu:zinc_dust", "enderio:powdered_iron", "gtceu:aluminium_dust")
         .inputFluids("gtceu:chlorine 1000")
         .itemOutputs("4x gtceu:znfealcl_catalyst_dust")
         .EUt(15360)
         .duration(250)
 
     gtr.large_chemical_reactor("gtlcore:co_ac_ab_catalyst_dust")
-        .itemInputs("2x gtceu:charcoal_dust", "gtceu:cobalt_dust", "gtceu:polybenzimidazole_plate")
+        .itemInputs("2x gtceu:charcoal_dust", "enderio:powdered_cobalt", "gtceu:polybenzimidazole_plate")
         .inputFluids("gtceu:steam 1000", "gtceu:acetylene 1000")
         .outputFluids("gtceu:hydrogen 4000", "gtceu:carbon_monoxide 1000")
         .itemOutputs("1x gtceu:co_ac_ab_catalyst_dust")
@@ -4357,7 +4317,7 @@ ServerEvents.recipes((event) => {
     gtr.chemical_reactor("gtlcore:gold_cyanide")
         .itemInputs("gtceu:sodium_dust")
         .inputFluids("gtceu:gold_cyanide 1000")
-        .itemOutputs("gtceu:gold_dust")
+        .itemOutputs("enderio:powdered_gold")
         .outputFluids("gtceu:sodium_cyanide 1000")
         .EUt(1920)
         .duration(140)
@@ -4420,7 +4380,7 @@ ServerEvents.recipes((event) => {
 
     gtr.large_chemical_reactor("gtlcore:trimethyltin_chloride")
         .notConsumable("gtceu:magnesium_dust")
-        .itemInputs("gtceu:tin_dust")
+        .itemInputs("enderio:powdered_tin")
         .inputFluids("gtceu:methane 3000", "gtceu:oxygen 1000", "gtceu:chlorine 2000")
         .outputFluids("gtceu:trimethyltin_chloride 1000", "gtceu:diluted_hydrochloric_acid 2000")
         .EUt(GTValues.VA[GTValues.LuV])
@@ -4995,7 +4955,7 @@ ServerEvents.recipes((event) => {
         .duration(600)
 
     gtr.mixer("gtlcore:perlite_dust")
-        .itemInputs("2x gtceu:obsidian_dust")
+        .itemInputs("2x enderio:powdered_obsidian")
         .inputFluids("minecraft:water 1000")
         .itemOutputs("3x gtceu:perlite_dust")
         .EUt(480)
@@ -5075,7 +5035,7 @@ ServerEvents.recipes((event) => {
         .duration(80)
 
     gtr.canner("gtlcore:infused_breath")
-        .inputFluids("gtceu:xpjuice 1000")
+        .inputFluids("enderio:xp_juice 1000")
         .itemInputs("minecraft:dragon_breath")
         .itemOutputs("gtlcore:infused_breath")
         .EUt(480)
@@ -7504,7 +7464,7 @@ ServerEvents.recipes((event) => {
         .notConsumable("64x minecraft:sculk_sensor")
         .itemInputs("64x minecraft:dirt", "64x minecraft:sculk_vein")
         .itemOutputs("64x minecraft:sculk")
-        .inputFluids("gtceu:unknowwater 1000", "gtceu:xpjuice 1000")
+        .inputFluids("gtceu:unknowwater 1000", "enderio:xp_juice 1000")
         .outputFluids("gtceu:echo_shard 10000")
         .EUt(1920)
         .duration(2400)
@@ -7513,7 +7473,7 @@ ServerEvents.recipes((event) => {
 
     gtr.canner("gtlcore:sculk")
         .itemInputs("minecraft:dirt", "minecraft:sculk_vein")
-        .inputFluids("gtceu:xpjuice 10")
+        .inputFluids("enderio:xp_juice 10")
         .itemOutputs("minecraft:sculk")
         .EUt(480)
         .duration(600)
@@ -7744,14 +7704,14 @@ ServerEvents.recipes((event) => {
         .duration(140)
 
     gtr.assembler("gtlcore:naquadria_charge")
-        .itemInputs("gtceu:black_steel_frame", "4x gtceu:titanium_bolt", "gtceu:hmxexplosive_dust", "gtceu:naquadria_dust", "gtceu:uranium_plate", "gtceu:osmium_bolt", "gtceu:hexanitrohexaaxaisowurtzitane_dust", "gtceu:thorium_plate")
-        .inputFluids("gtceu:glyceryl_trinitrate 1000")
+        .itemInputs("gtceu:black_steel_frame", "gtceu:dynamite", "4x gtceu:titanium_bolt", "gtceu:hmxexplosive_dust", "gtceu:naquadria_dust", "gtceu:uranium_plate", "gtceu:osmium_bolt", "gtceu:hexanitrohexaaxaisowurtzitane_dust", "gtceu:thorium_plate")
+        .inputFluids("gtceu:glyceryl_trinitrate 500")
         .itemOutputs("gtlcore:naquadria_charge")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(100)
 
     gtr.mixer("gtlcore:eglin_steel_dust")
-        .itemInputs("4x gtceu:iron_dust", "1x gtceu:kanthal_dust", "5x gtceu:invar_dust", "1x gtceu:sulfur_dust", "1x gtceu:silicon_dust", "1x gtceu:carbon_dust")
+        .itemInputs("4x enderio:powdered_iron", "1x gtceu:kanthal_dust", "5x gtceu:invar_dust", "1x gtceu:sulfur_dust", "1x gtceu:silicon_dust", "1x gtceu:carbon_dust")
         .itemOutputs("13x gtceu:eglin_steel_dust")
         .EUt(120)
         .duration(600)
@@ -8094,7 +8054,7 @@ ServerEvents.recipes((event) => {
 
     gtr.extractor("gtlcore:xpjuice")
         .itemInputs("minecraft:sculk")
-        .outputFluids("gtceu:xpjuice 100")
+        .outputFluids("enderio:xp_juice 100")
         .EUt(120)
         .duration(20)
 
@@ -8111,7 +8071,7 @@ ServerEvents.recipes((event) => {
 
     gtr.macerator("gtlcore:draconium_dust")
         .itemInputs("gtlcore:draconium_block_charged")
-        .itemOutputs("9x gtlcore:draconium_dust", "gtceu:obsidian_dust", "gtceu:ender_eye_dust", "minecraft:redstone")
+        .itemOutputs("9x gtlcore:draconium_dust", "enderio:powdered_obsidian", "gtceu:ender_eye_dust", "minecraft:redstone")
         .EUt(1920)
         .duration(400)
 
@@ -9430,7 +9390,7 @@ ServerEvents.recipes((event) => {
             "131072x gtceu:aluminium_dust",
             "131072x gtceu:gallium_dust",
             "131072x gtceu:indium_dust",
-            "131072x gtceu:tin_dust",
+            "131072x enderio:powdered_tin",
             "131072x gtceu:thallium_dust",
             "131072x gtceu:lead_dust",
             "131072x gtceu:bismuth_dust",
@@ -9439,10 +9399,10 @@ ServerEvents.recipes((event) => {
             "131072x gtceu:vanadium_dust",
             "131072x gtceu:chromium_dust",
             "131072x gtceu:manganese_dust",
-            "131072x gtceu:iron_dust",
-            "131072x gtceu:cobalt_dust",
+            "131072x enderio:powdered_iron",
+            "131072x enderio:powdered_cobalt",
             "131072x gtceu:nickel_dust",
-            "131072x gtceu:copper_dust",
+            "131072x enderio:powdered_copper",
             "131072x gtceu:zinc_dust",
             "131072x gtceu:zirconium_dust",
             "131072x gtceu:niobium_dust",
@@ -9460,7 +9420,7 @@ ServerEvents.recipes((event) => {
             "131072x gtceu:osmium_dust",
             "131072x gtceu:iridium_dust",
             "131072x gtceu:platinum_dust",
-            "131072x gtceu:gold_dust",
+            "131072x enderio:powdered_gold",
             "131072x gtceu:beryllium_dust",
             "131072x gtceu:magnesium_dust",
             "131072x gtceu:calcium_dust",
@@ -10183,7 +10143,7 @@ ServerEvents.recipes((event) => {
 
     gtr.centrifuge("gtlcore:fissioned_uranium_235_dust")
         .itemInputs("gtceu:fissioned_uranium_235_dust")
-        .itemOutputs("gtceu:tin_dust", "gtceu:technetium_dust")
+        .itemOutputs("enderio:powdered_tin", "gtceu:technetium_dust")
         .EUt(1920)
         .duration(400)
 
@@ -10209,7 +10169,7 @@ ServerEvents.recipes((event) => {
         .duration(760)
 
     gtr.chemical_reactor("gtlcore:prasiolite_dust")
-        .itemInputs("5x gtceu:silicon_dust", "gtceu:iron_dust")
+        .itemInputs("5x gtceu:silicon_dust", "enderio:powdered_iron")
         .inputFluids("gtceu:oxygen 10000")
         .itemOutputs("gtceu:prasiolite_dust")
         .EUt(480)
@@ -10574,13 +10534,13 @@ ServerEvents.recipes((event) => {
         .duration(1400)
 
     gtr.dimensionally_transcendent_mixer("gtlcore:poor_dust")
-        .itemInputs("1x gtceu:aluminium_dust", "1x gtceu:gallium_dust", "1x gtceu:indium_dust", "1x gtceu:tin_dust", "1x gtceu:thallium_dust", "1x gtceu:lead_dust", "1x gtceu:bismuth_dust", "1x gtceu:polonium_dust")
+        .itemInputs("1x gtceu:aluminium_dust", "1x gtceu:gallium_dust", "1x gtceu:indium_dust", "1x enderio:powdered_tin", "1x gtceu:thallium_dust", "1x gtceu:lead_dust", "1x gtceu:bismuth_dust", "1x gtceu:polonium_dust")
         .itemOutputs("8x gtceu:poor_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1600)
 
     gtr.dimensionally_transcendent_mixer("gtlcore:transition_1_dust")
-        .itemInputs("1x gtceu:titanium_dust", "1x gtceu:vanadium_dust", "1x gtceu:chromium_dust", "1x gtceu:manganese_dust", "1x gtceu:iron_dust", "1x gtceu:cobalt_dust", "1x gtceu:nickel_dust", "1x gtceu:copper_dust", "1x gtceu:zinc_dust")
+        .itemInputs("1x gtceu:titanium_dust", "1x gtceu:vanadium_dust", "1x gtceu:chromium_dust", "1x gtceu:manganese_dust", "1x enderio:powdered_iron", "1x enderio:powdered_cobalt", "1x gtceu:nickel_dust", "1x enderio:powdered_copper", "1x gtceu:zinc_dust")
         .itemOutputs("9x gtceu:transition_1_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1800)
@@ -10592,7 +10552,7 @@ ServerEvents.recipes((event) => {
         .duration(1800)
 
     gtr.dimensionally_transcendent_mixer("gtlcore:transition_3_dust")
-        .itemInputs("1x gtceu:hafnium_dust", "1x gtceu:tantalum_dust", "1x gtceu:tungsten_dust", "1x gtceu:rhenium_dust", "1x gtceu:osmium_dust", "1x gtceu:iridium_dust", "1x gtceu:platinum_dust", "1x gtceu:gold_dust")
+        .itemInputs("1x gtceu:hafnium_dust", "1x gtceu:tantalum_dust", "1x gtceu:tungsten_dust", "1x gtceu:rhenium_dust", "1x gtceu:osmium_dust", "1x gtceu:iridium_dust", "1x gtceu:platinum_dust", "1x enderio:powdered_gold")
         .inputFluids("gtceu:mercury 1000")
         .itemOutputs("9x gtceu:transition_3_dust")
         .EUt(GTValues.VA[GTValues.UIV])
@@ -11322,7 +11282,7 @@ ServerEvents.recipes((event) => {
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
     gtr.mixer("gtlcore:charged_caesium_cerium_cobalt_indium_dust")
-        .itemInputs("10x gtceu:indium_dust", "2x gtceu:cobalt_dust", "1x gtceu:cerium_dust", "1x gtceu:caesium_dust")
+        .itemInputs("10x gtceu:indium_dust", "2x enderio:powdered_cobalt", "1x gtceu:cerium_dust", "1x gtceu:caesium_dust")
         .inputFluids("gtceu:cosmic_computing_mixture 1000")
         .itemOutputs("14x gtceu:charged_caesium_cerium_cobalt_indium_dust")
         .EUt(GTValues.VA[GTValues.UIV])
@@ -11569,7 +11529,7 @@ ServerEvents.recipes((event) => {
 
     gtr.electromagnetic_separator("gtlcore:graphene_oxide_dust")
         .itemInputs("gtlcore:graphene_iron_plate")
-        .itemOutputs("3x gtceu:graphene_oxide_dust", "gtceu:iron_dust")
+        .itemOutputs("3x gtceu:graphene_oxide_dust", "enderio:powdered_iron")
         .EUt(30)
         .duration(120)
 
@@ -12151,7 +12111,7 @@ ServerEvents.recipes((event) => {
         .duration(1200)
 
     gtr.assembler("gtlcore:slaughterhouse")
-        .itemInputs("gtceu:steel_frame", "gtceu:lv_world_accelerator", "4x #gtceu:circuits/lv", "8x gtceu:lv_electric_motor", "4x gtceu:lv_robot_arm", "8x gtceu:invar_gear", "2x gtceu:diamond_grinding_head", "4x gtceu:double_steel_plate")
+        .itemInputs("gtceu:steel_frame", "gtceu:lv_world_accelerator", "4x #gtceu:circuits/lv", "2x gtceu:pulsating_alloy_hex_wire", "8x gtceu:lv_electric_motor", "4x gtceu:lv_robot_arm", "8x gtceu:invar_gear", "2x gtceu:diamond_grinding_head", "4x gtceu:double_steel_plate")
         .itemOutputs("gtlcore:slaughterhouse")
         .EUt(30)
         .duration(400)
@@ -12729,7 +12689,7 @@ ServerEvents.recipes((event) => {
         .duration(400)
 
     gtr.lightning_processor("gtlcore:ender_air")
-        .itemInputs("64x ae2:ender_dust")
+        .itemInputs("64x enderio:powdered_ender_pearl")
         .inputFluids("gtceu:fuming_nitric_acid 1000", "gtceu:nitrogen_dioxide 10000", "gtceu:helium 10000", "gtceu:radon 1000", "gtceu:deuterium 1000", "gtceu:xenon 1000")
         .outputFluids("gtceu:ender_air 1000")
         .EUt(480)
@@ -13232,7 +13192,7 @@ ServerEvents.recipes((event) => {
         .duration(20)
 
     gtr.chemical_reactor("gtlcore:gammabutyrolactone")
-        .notConsumable("gtceu:copper_dust")
+        .notConsumable("enderio:powdered_copper")
         .inputFluids("gtceu:butane_1_4_diol 1000")
         .outputFluids("gtceu:gammabutyrolactone 1000", "gtceu:hydrogen 4000")
         .EUt(1920)
@@ -13317,7 +13277,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("gtceu:iridium_nanoswarm")
         .itemOutputs("gtceu:contaminable_iridium_nanoswarm")
         .notConsumable("gtceu:potassium_dichromate_dust")
-        .itemInputs("1152x gtceu:carbon_dust", "16x gtceu:copper_dust", "144x gtceu:zinc_dust")
+        .itemInputs("1152x gtceu:carbon_dust", "16x enderio:powdered_copper", "144x gtceu:zinc_dust")
         .inputFluids("gtceu:chlorobenzene 28800", "gtceu:sulfuric_acid 14400", "gtceu:hydrogen 316800", "gtceu:nitrogen 57600", "gtceu:oxygen 201600")
         .outputFluids("gtceu:polybenzimidazole 21600")
         .EUt(GTValues.VA[GTValues.UHV])
@@ -13446,7 +13406,7 @@ ServerEvents.recipes((event) => {
     gtr.distort("gtlcore:polyurethaneresin")
         .itemInputs("gtceu:gold_nanoswarm")
         .itemOutputs("gtceu:contaminable_gold_nanoswarm")
-        .itemInputs("45x gtceu:tin_dust", "64x gtceu:carbon_dust", "5x gtceu:nickel_dust", "5x gtceu:palladium_dust", "5x gtceu:iron_dust", "36x gtceu:silicon_dust")
+        .itemInputs("45x enderio:powdered_tin", "64x gtceu:carbon_dust", "5x gtceu:nickel_dust", "5x gtceu:palladium_dust", "5x enderio:powdered_iron", "36x gtceu:silicon_dust")
         .inputFluids("gtceu:oxygen 1964000", "gtceu:hydrogen 529000", "gtceu:chlorine 870000", "gtceu:nitrogen 45000")
         .outputFluids("gtceu:polyurethaneresin 45000")
         .EUt(GTValues.VA[GTValues.UEV])
@@ -13689,7 +13649,7 @@ ServerEvents.recipes((event) => {
         .duration(20)
 
     gtr.lightning_processor("gtlcore:thaumium_dust")
-        .itemInputs("8x gtceu:infused_gold_dust", "8x gtceu:iron_dust", "16x gtceu:lapis_dust")
+        .itemInputs("8x gtceu:infused_gold_dust", "4x enderio:soul_powder","4x enderio:powdered_iron", "16x enderio:powdered_lapis_lazuli")
         .inputFluids("gtceu:distilled_water 1000")
         .itemOutputs("16x gtceu:thaumium_dust")
         .EUt(7680)
@@ -13859,7 +13819,7 @@ ServerEvents.recipes((event) => {
     tiers.forEach(i => {
         gtr.assembler("gtlcore:" + i[0] + "_neutron_accelerator")
             .itemInputs("gtceu:" + i[0] + "_machine_hull", "gtlcore:inverter", i[1] === 0 ? "2x gtceu:lead_rotor" : "2x gtceu:" + i[0] + "_electric_motor", "gtceu:double_beryllium_plate", "2x gtceu:polyvinyl_chloride_plate")
-            .itemOutputs("gtceu:" + i[0] + "_neutron_accelerator")
+            .itemOutputs("gtlcore:" + i[0] + "_neutron_accelerator")
             .inputFluids("gtceu:polonium 288")
             .EUt(30)
             .duration(400)
@@ -13887,7 +13847,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
 
     gtr.assembler("gtlcore:process_machine_casing")
-        .itemInputs("gtceu:solid_machine_casing", "2x #gtceu:circuits/iv", "2x gtceu:double_stainless_steel_plate", "4x gtceu:double_mar_m_200_steel_plate")
+        .itemInputs("gtceu:solid_machine_casing", "2x #gtceu:circuits/iv", "gtceu:end_steel_quadruple_wire", "2x gtceu:double_stainless_steel_plate", "4x gtceu:double_mar_m_200_steel_plate")
         .inputFluids("gtceu:fall_king 576")
         .itemOutputs("gtlcore:process_machine_casing")
         .EUt(7680)
@@ -13938,7 +13898,7 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:uu_amplifier 1000")
         .notConsumable("gtceu:degenerate_rhenium_plate")
         .itemInputs("minecraft:dragon_egg")
-        .itemOutputs("8x gtceu:ender_eye_dust", "4x ae2:ender_dust")
+        .itemOutputs("8x gtceu:ender_eye_dust", "4x enderio:powdered_ender_pearl")
         .chancedOutput("gtlcore:draconium_dust", 4000, 0)
         .addData("ev_min", 800)
         .addData("ev_max", 900)
@@ -16048,7 +16008,7 @@ ServerEvents.recipes((event) => {
     gtr.vacuum_drying("gtlcore:chalcopyrite_front_pro")
         .circuit(2)
         .inputFluids("gtceu:chalcopyrite_front 4000")
-        .itemOutputs("64x gtceu:copper_dust", "64x gtceu:copper_dust", "64x gtceu:iron_dust", "48x gtceu:iron_dust", "48x gtceu:cadmium_dust", "32x gtceu:indium_dust")
+        .itemOutputs("64x enderio:powdered_copper", "64x enderio:powdered_copper", "64x enderio:powdered_iron", "48x enderio:powdered_iron", "48x gtceu:cadmium_dust", "32x gtceu:indium_dust")
         .outputFluids("gtceu:red_mud 200", "minecraft:water 2000")
         .EUt(GTValues.VA[GTValues.IV])
         .duration(2400)
@@ -16075,7 +16035,7 @@ ServerEvents.recipes((event) => {
     gtr.vacuum_drying("gtlcore:nickel_front_pro")
         .circuit(5)
         .inputFluids("gtceu:nickel_front 4000")
-        .itemOutputs("64x gtceu:nickel_dust", "64x gtceu:nickel_dust", "64x gtceu:cobalt_dust", "64x gtceu:cobalt_dust", "32x gtceu:iron_dust", "32x gtceu:rhodium_dust")
+        .itemOutputs("64x gtceu:nickel_dust", "64x gtceu:nickel_dust", "64x enderio:powdered_cobalt", "64x enderio:powdered_cobalt", "32x enderio:powdered_iron", "32x gtceu:rhodium_dust")
         .outputFluids("gtceu:red_mud 200", "minecraft:water 2000")
         .EUt(GTValues.VA[GTValues.IV])
         .duration(2400)
@@ -16084,7 +16044,7 @@ ServerEvents.recipes((event) => {
     gtr.vacuum_drying("gtlcore:platinum_front_pro")
         .circuit(6)
         .inputFluids("gtceu:platinum_front 4000")
-        .itemOutputs("64x gtceu:platinum_dust", "48x gtceu:nickel_dust", "32x gtceu:iridium_dust", "32x gtceu:osmium_dust", "32x gtceu:palladium_dust", "32x gtceu:cobalt_dust")
+        .itemOutputs("64x gtceu:platinum_dust", "48x gtceu:nickel_dust", "32x gtceu:iridium_dust", "32x gtceu:osmium_dust", "32x gtceu:palladium_dust", "32x enderio:powdered_cobalt")
         .outputFluids("gtceu:red_mud 200", "minecraft:water 2000")
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(2400)
@@ -16120,7 +16080,7 @@ ServerEvents.recipes((event) => {
     gtr.vacuum_drying("gtlcore:sphalerite_front_pro")
         .circuit(10)
         .inputFluids("gtceu:sphalerite_front 4000")
-        .itemOutputs("64x gtceu:zinc_dust", "64x gtceu:zinc_dust", "64x gtceu:iron_dust", "32x gtceu:iron_dust", "64x gtceu:indium_dust", "64x gtceu:gallium_dust")
+        .itemOutputs("64x gtceu:zinc_dust", "64x gtceu:zinc_dust", "64x enderio:powdered_iron", "32x enderio:powdered_iron", "64x gtceu:indium_dust", "64x gtceu:gallium_dust")
         .outputFluids("gtceu:red_mud 200", "minecraft:water 2000")
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(2400)
@@ -16129,7 +16089,7 @@ ServerEvents.recipes((event) => {
     gtr.vacuum_drying("gtlcore:pentlandite_front_pro")
         .circuit(11)
         .inputFluids("gtceu:pentlandite_front 4000")
-        .itemOutputs("64x gtceu:iron_dust", "64x gtceu:iron_dust", "64x gtceu:nickel_dust", "64x gtceu:nickel_dust", "64x gtceu:bismuth_dust", "48x gtceu:ruthenium_dust")
+        .itemOutputs("64x enderio:powdered_iron", "64x enderio:powdered_iron", "64x gtceu:nickel_dust", "64x gtceu:nickel_dust", "64x gtceu:bismuth_dust", "48x gtceu:ruthenium_dust")
         .outputFluids("gtceu:red_mud 200", "minecraft:water 2000")
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(2400)
@@ -16981,4 +16941,32 @@ ServerEvents.recipes((event) => {
         .itemOutputs("gtlcore:rotor_hatch")
         .duration(400)
         .EUt(480)
+
+    gtr.assembler("gtlcore:nuke_bomb")
+        .itemInputs("gtceu:industrial_tnt", "#gtceu:circuits/ev", "4x gtceu:uranium_235_nugget", "gtlcore:reactor_uranium_simple", "gtceu:reactor_steel_plate")
+        .itemOutputs("gtlcore:nuke_bomb")
+        .duration(200)
+        .EUt(480)
+
+    gtr.assembler("gtlcore:naquadria_charge_a")
+        .itemInputs("gtceu:quantum_star", "gtlcore:nuke_bomb", "gtceu:naquadria_dust", "4x gtceu:tiny_hexanitrohexaaxaisowurtzitane_dust", "gtceu:double_thorium_plate")
+        .inputFluids("gtceu:antimatter 1")
+        .itemOutputs("64x gtlcore:naquadria_charge")
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.OpV])
+
+    gtr.assembler("gtlcore:leptonic_charge")
+        .itemInputs("gtceu:gravi_star", "gtlcore:nuke_bomb", "gtceu:degenerate_rhenium_dust", "2x gtceu:small_hexanitrohexaaxaisowurtzitane_dust", "gtceu:double_enderium_plate")
+        .inputFluids("gtceu:antimatter 10")
+        .itemOutputs("64x gtlcore:leptonic_charge")
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.MAX])
+
+    gtr.assembler("gtlcore:quantum_chromodynamic_charge")
+        .notConsumable("gtceu:eternity_nanoswarm")
+        .itemInputs("gtlcore:unstable_star", "gtlcore:leptonic_charge", "gtlcore:quantumchromodynamic_protective_plating")
+        .inputFluids("gtceu:antimatter 100")
+        .itemOutputs("64x gtlcore:quantum_chromodynamic_charge")
+        .duration(200)
+        .EUt(4 * GTValues.VA[GTValues.MAX])
 })

@@ -1,11 +1,5 @@
 ServerEvents.recipes(event => {
     const gtr = event.recipes.gtceu
-    event.remove({ type: "ad_astra:compressing" })
-    event.remove({ type: "ad_astra:alloying" })
-    event.remove({ type: "ad_astra:cryo_freezing" })
-    event.remove({ type: "ad_astra:nasa_workbench" })
-    event.remove({ type: "ad_astra:oxygen_loading" })
-    event.remove({ type: "ad_astra:refining" })
     event.shapeless("ad_astra:energizer", "gtceu:ulv_charger_4x")
 
     event.shaped("ad_astra:nasa_workbench", [
@@ -35,7 +29,7 @@ ServerEvents.recipes(event => {
         .duration(200)
 
     gtr.electric_blast_furnace("gtlcore:iron_plate")
-        .itemInputs("gtceu:conductive_alloy_block", "gtceu:double_wrought_iron_plate", "16x gtceu:wrought_iron_dust")
+        .itemInputs("gtceu:magnetic_iron_block", "gtceu:double_wrought_iron_plate", "16x gtceu:wrought_iron_dust")
         .inputFluids("gtceu:iron 1296")
         .itemOutputs("ad_astra:iron_plate")
         .chancedOutput("gtceu:steel_ingot", 5000, 0)
@@ -415,11 +409,12 @@ ServerEvents.recipes(event => {
         .duration(2400)
         .blastFurnaceTemp(5200)
 
-    gtr.alloy_smelter("gtlcore:calorite_ingot")
+    gtr.electric_blast_furnace("gtlcore:calorite_ingot")
         .itemInputs("gtceu:naquadah_ingot", "gtceu:calorite_dust")
         .itemOutputs("ad_astra:calorite_ingot")
-        .EUt(16)
-        .duration(120000)
+        .EUt(1920)
+        .duration(3200)
+        .blastFurnaceTemp(6100)
 
     gtr.rolling("gtlcore:desh_plate")
         .itemInputs("ad_astra:desh_block")

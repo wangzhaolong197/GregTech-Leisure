@@ -14,7 +14,7 @@
      * The y level where rockets should leave the dimension and enter space.
      * Type: Integer
      */
-    "atmosphereLeave": 600,
+    "atmosphereLeave": 1000,
     // A comma-separated list of planet IDs that should be hidden from the planets screen. e.g. minecraft:overworld,ad_astra:moon,ad_astra:mars,ad_astra:venus,ad_astra:mercury,ad_astra:glacio
     "disabledPlanets": "",
     // Disables oxygen damage.
@@ -24,7 +24,7 @@
     // Uses normal gravity for all planets.
     "disableGravity": false,
     // An Air Vortex is created when an oxygenated structure breaks its seal, causing every entity inside to rapidly get sucked out. This setting disables that.
-    "disableAirVortexes": false,
+    "disableAirVortexes": true,
     "cryoFreezer": {
         // Type: Long
         "ironTierMaxEnergyInOut": 100,
@@ -67,11 +67,11 @@
          * The tick rate (20 ticks = 1 second) at which the oxygen distributor and gravity normalizer will recalculate the distribution area.
          * Type: Integer
          */
-        "distributionRefreshRate": 100,
+        "distributionRefreshRate": 200,
         /*
          * The tick rate (20 ticks = 1 second) at which cables and fluid pipes will recalculate their connections.
          * Type: Integer
          */
-        "pipeRefreshRate": 50
+        "pipeRefreshRate": 200
     }
 }

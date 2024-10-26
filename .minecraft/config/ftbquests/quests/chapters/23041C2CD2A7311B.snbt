@@ -43,8 +43,8 @@
 			dependencies: ["1433920A4DDCE2B5"]
 			id: "49ED5C32664DDF6C"
 			tasks: [{
-				id: "4D768A7D3AD7A99E"
-				item: "gtceu:crystalmatrix_ingot"
+				id: "0EB25857226F98DD"
+				item: "avaritia:crystal_matrix_ingot"
 				type: "item"
 			}]
 			x: 2.0d

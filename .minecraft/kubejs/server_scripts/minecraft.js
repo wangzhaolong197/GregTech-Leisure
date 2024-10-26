@@ -32,6 +32,12 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .EUt(16)
 
+    gtr.mixer("gtlcore:grass_block")
+        .itemInputs("minecraft:dirt", "minecraft:grass")
+        .itemOutputs("minecraft:grass_block")
+        .duration(200)
+        .EUt(16)
+
     gtr.autoclave("gtlcore:soul_soil")
         .itemInputs("enderio:filled_soul_vial", "minecraft:rooted_dirt")
         .inputFluids("gtceu:liquid_nether_air 100")

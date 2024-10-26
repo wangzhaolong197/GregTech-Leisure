@@ -30,7 +30,7 @@
         "Name": "gtlcore:ganymedestone"
       },
       "default_fluid": {
-        "Name": "minecraft:frosted_ice",
+        "Name": "minecraft:ice",
         "Properties": {
           "age": "0"
         }

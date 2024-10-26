@@ -453,7 +453,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: -2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["09210B5E086F6E1A"]
@@ -661,6 +661,25 @@
 			}]
 			x: 12.0d
 			y: 8.0d
+		}
+		{
+			dependencies: ["192B626CF217FDBC"]
+			description: ["模拟方块转换"]
+			id: "364D5117A21641FB"
+			tasks: [
+				{
+					id: "3D017A561051FC7D"
+					item: "gtlcore:conversion_simulate_card"
+					type: "item"
+				}
+				{
+					id: "195E4181C9AC3059"
+					item: "gtlcore:block_bus"
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: -2.0d
 		}
 	]
 	subtitle: ["Tier10-UEV"]

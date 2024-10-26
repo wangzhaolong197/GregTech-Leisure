@@ -155,7 +155,6 @@
 				"卷板机用来卷板，弹簧和环"
 				"多辊式扎压机用来压箔"
 			]
-			hide_dependent_lines: true
 			id: "3DC0B933936357B3"
 			rewards: [{
 				id: "5722F9FCDB566036"
@@ -347,26 +346,6 @@
 		}
 		{
 			dependencies: [
-				"29A8EC2EB3240278"
-				"2D6BB32B642AE8BA"
-			]
-			description: ["从物品中提取东西"]
-			id: "63C2FA96C708C125"
-			rewards: [{
-				id: "00F71B34C31D9DD1"
-				item: "gtceu:silver_credit"
-				type: "item"
-			}]
-			tasks: [{
-				id: "061EC839843C4CDA"
-				item: "gtceu:lv_extractor"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
 				"13DADE13289E59D0"
 				"77406A75BD5839C2"
 			]
@@ -385,7 +364,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["63C2FA96C708C125"]
+			dependencies: ["07079FF646C870C9"]
 			id: "18C2AB18B354F774"
 			rewards: [{
 				id: "39AA63FFC2362D94"
@@ -398,7 +377,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -453,7 +432,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 4.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["51B9A72C19F84F0E"]
@@ -1147,6 +1126,17 @@
 			}]
 			x: 14.0d
 			y: -2.0d
+		}
+		{
+			dependencies: ["20F6BF1EDC6EBDC1"]
+			id: "4F983874C005BB33"
+			tasks: [{
+				id: "27F5C6354C2EC3F5"
+				item: "gtlcore:liquefaction_furnace"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
 		}
 	]
 	subtitle: ["Tier1-LV"]

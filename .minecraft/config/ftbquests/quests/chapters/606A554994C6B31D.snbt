@@ -661,43 +661,6 @@
 		}
 		{
 			can_repeat: true
-			dependencies: ["1994BAD293E85984"]
-			icon: "travelanchors:travel_staff"
-			id: "0A5739F8E482B47E"
-			rewards: [{
-				id: "0CCB7C8F1482C14A"
-				item: {
-					Count: 1
-					id: "minecraft:enchanted_book"
-					tag: {
-						StoredEnchantments: [{
-							id: "travelanchors:teleportation"
-							lvl: 1s
-						}]
-					}
-				}
-				type: "item"
-			}]
-			tasks: [
-				{
-					consume_items: true
-					id: "52FF263193A25CD4"
-					item: "gtceu:silver_credit"
-					type: "item"
-				}
-				{
-					consume_items: true
-					id: "0AC8562951E67700"
-					item: "travelanchors:travel_staff"
-					type: "item"
-				}
-			]
-			title: "省一个格子"
-			x: -1.5d
-			y: -2.5d
-		}
-		{
-			can_repeat: true
 			dependencies: ["231670C48BBDDB3E"]
 			icon: "gtceu:lv_super_tank"
 			id: "1C4B5EDEA37AF553"
@@ -765,7 +728,7 @@
 				type: "item"
 			}]
 			title: "流体单元 I"
-			x: 0.0d
+			x: -1.5d
 			y: -2.5d
 		}
 		{
@@ -1364,7 +1327,7 @@
 				}
 			]
 			title: "进阶魔力发电"
-			x: 1.5d
+			x: 0.0d
 			y: -2.5d
 		}
 		{

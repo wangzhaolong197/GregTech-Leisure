@@ -31,7 +31,7 @@
 				item: "gtceu:iv_mixer"
 				type: "item"
 			}]
-			x: 0.0d
+			x: 4.0d
 			y: 2.0d
 		}
 		{
@@ -133,7 +133,7 @@
 				item: "gtceu:rhodium_plated_palladium_ingot"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 10.0d
 			y: 4.0d
 		}
 		{
@@ -157,8 +157,8 @@
 				item: "gtceu:hssg_ingot"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.0d
+			x: 2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -189,7 +189,7 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
+			x: 4.0d
 			y: 6.0d
 		}
 		{
@@ -227,7 +227,7 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
+			x: 4.0d
 			y: 8.0d
 		}
 		{
@@ -239,8 +239,8 @@
 				item: "gtceu:iv_assembler"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 2.0d
+			x: 4.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["38480A52A13DA157"]
@@ -257,7 +257,7 @@
 			}]
 			title: "新的塑料"
 			x: 8.0d
-			y: 4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -398,7 +398,7 @@
 				item: "gtceu:hpic_chip"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 10.0d
 			y: 2.0d
 		}
 		{
@@ -414,7 +414,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -429,7 +429,7 @@
 				item: "gtceu:samarium_iron_arsenic_oxide_ingot"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 0.0d
 			y: 4.0d
 		}
 		{
@@ -440,7 +440,7 @@
 				item: "gtceu:iv_field_generator"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 0.0d
 			y: 6.0d
 		}
 		{
@@ -498,8 +498,8 @@
 				type: "item"
 			}]
 			title: "新的玻璃"
-			x: 10.0d
-			y: 2.0d
+			x: 4.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["38480A52A13DA157"]
@@ -523,7 +523,7 @@
 				item: "gtceu:blaze_blast_furnace"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 0.0d
 			y: 8.0d
 		}
 		{
@@ -538,7 +538,7 @@
 				item: "gtceu:dimensionally_transcendent_steam_boiler"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 0.0d
 		}
 		{
@@ -660,7 +660,7 @@
 				item: "gtceu:assembly_line_casing"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 12.0d
 			y: 4.0d
 		}
 		{
@@ -674,26 +674,6 @@
 			}]
 			x: 10.0d
 			y: 8.0d
-		}
-		{
-			dependencies: ["38480A52A13DA157"]
-			description: ["你的线缆得开始用更高级的橡胶了"]
-			id: "7794BE986C48C92D"
-			tasks: [
-				{
-					id: "3BC56557E74FF20C"
-					item: "gtceu:silicone_rubber_plate"
-					type: "item"
-				}
-				{
-					id: "3BD63C09996689EA"
-					item: "gtceu:styrene_butadiene_rubber_plate"
-					type: "item"
-				}
-			]
-			title: "新的橡胶"
-			x: 8.0d
-			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -733,20 +713,7 @@
 				item: "gtceu:samarium_dust"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["38480A52A13DA157"]
-			description: ["新的材料"]
-			id: "076BD82842C349A3"
-			tasks: [{
-				id: "464C4FCFEC9CD809"
-				item: "gtceu:polyphenylene_sulfide_foil"
-				type: "item"
-			}]
-			title: "新的树脂"
-			x: 8.0d
+			x: 0.0d
 			y: 2.0d
 		}
 		{
@@ -780,6 +747,43 @@
 			}]
 			x: 8.0d
 			y: 8.0d
+		}
+		{
+			dependencies: ["7F8C2ECC7CE2BF20"]
+			id: "585580AFDFACDDB8"
+			tasks: [{
+				id: "7D699FD179C16EB0"
+				item: "gtceu:auto_configuration_maintenance_hatch"
+				type: "item"
+			}]
+			title: "五倍速！！"
+			x: 14.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["38480A52A13DA157"]
+			description: ["你的线缆得开始用更高级的橡胶和树脂了"]
+			id: "7794BE986C48C92D"
+			tasks: [
+				{
+					id: "3BC56557E74FF20C"
+					item: "gtceu:silicone_rubber_plate"
+					type: "item"
+				}
+				{
+					id: "3BD63C09996689EA"
+					item: "gtceu:styrene_butadiene_rubber_plate"
+					type: "item"
+				}
+				{
+					id: "28E57547D89B2ED8"
+					item: "gtceu:polyphenylene_sulfide_foil"
+					type: "item"
+				}
+			]
+			title: "新的橡胶与树脂"
+			x: 8.0d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Tier5-IV"]

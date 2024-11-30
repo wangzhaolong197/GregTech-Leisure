@@ -359,7 +359,7 @@
 				item: "gtceu:integrated_ore_processor"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 13.0d
 			y: 8.0d
 		}
 		{
@@ -373,7 +373,7 @@
 				item: "gtceu:petrochemical_plant"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 14.0d
 			y: 8.0d
 		}
 		{
@@ -596,7 +596,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 6.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["35D158AD5036923D"]
@@ -608,6 +608,28 @@
 				type: "checkmark"
 			}]
 			x: 14.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["62D2B830A98424BB"]
+			id: "41C7A298C421C65D"
+			tasks: [{
+				id: "113219BE64EFCAB0"
+				item: "gtceu:mega_blast_furnace"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["62D2B830A98424BB"]
+			id: "237F6A0B77986D56"
+			tasks: [{
+				id: "2E4DE5399833ED46"
+				item: "gtceu:mega_alloy_blast_smelter"
+				type: "item"
+			}]
+			x: 6.0d
 			y: 8.0d
 		}
 	]

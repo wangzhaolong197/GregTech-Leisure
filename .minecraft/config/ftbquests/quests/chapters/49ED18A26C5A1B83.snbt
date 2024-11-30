@@ -1370,7 +1370,7 @@
 				item: "gtceu:precision_assembler"
 				type: "item"
 			}]
-			x: -2.0d
+			x: 0.0d
 			y: 18.0d
 		}
 		{
@@ -1384,7 +1384,7 @@
 				item: "gtceu:mage_assembler"
 				type: "item"
 			}]
-			x: 0.0d
+			x: 2.0d
 			y: 18.0d
 		}
 		{
@@ -1998,8 +1998,8 @@
 				item: "gtceu:pcb_factory"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 18.0d
+			x: 20.0d
+			y: 16.0d
 		}
 		{
 			dependencies: ["45096D94AE6F7864"]
@@ -2134,8 +2134,8 @@
 				item: "gtceu:space_probe_surface_reception"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 20.0d
+			x: -2.0d
+			y: 18.0d
 		}
 		{
 			dependencies: ["5019F5F1A660DB40"]
@@ -2637,8 +2637,8 @@
 				item: "gtceu:zpm_fluid_drilling_rig"
 				type: "item"
 			}]
-			x: -4.0d
-			y: 14.0d
+			x: -6.0d
+			y: 20.0d
 		}
 		{
 			dependencies: ["38480A52A13DA157"]
@@ -2727,7 +2727,7 @@
 				id: "35D84DB9E78E62B4"
 				type: "checkmark"
 			}]
-			title: "这里有205个多方块"
+			title: "这里有208个多方块"
 			x: -12.0d
 			y: -2.0d
 		}
@@ -2772,7 +2772,7 @@
 				item: "gtceu:atomic_energy_excitation_plant"
 				type: "item"
 			}]
-			x: 16.0d
+			x: 22.0d
 			y: 16.0d
 		}
 		{
@@ -2798,7 +2798,7 @@
 				type: "item"
 			}]
 			x: -4.0d
-			y: 20.0d
+			y: 14.0d
 		}
 		{
 			dependencies: [
@@ -2989,7 +2989,7 @@
 				item: "gtceu:digestion_tank"
 				type: "item"
 			}]
-			x: 18.0d
+			x: 16.0d
 			y: 16.0d
 		}
 		{
@@ -3000,7 +3000,7 @@
 				item: "gtceu:dissolving_tank"
 				type: "item"
 			}]
-			x: 20.0d
+			x: 18.0d
 			y: 16.0d
 		}
 		{
@@ -3011,7 +3011,7 @@
 				item: "gtceu:wood_distillation"
 				type: "item"
 			}]
-			x: 16.0d
+			x: 22.0d
 			y: 14.0d
 		}
 		{
@@ -3033,8 +3033,34 @@
 				item: "gtceu:large_packer"
 				type: "item"
 			}]
-			x: 22.0d
+			x: 16.0d
 			y: 14.0d
+		}
+		{
+			dependencies: ["40405034AE9D9945"]
+			description: ["模拟"]
+			id: "135B64D1375B24F5"
+			tasks: [{
+				id: "550C1EE70A2DCD9B"
+				item: "gtceu:simulation_machine"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"6A590699685D1D8A"
+				"037E0C98C48C3322"
+			]
+			id: "59C0279AD036CC6A"
+			tasks: [{
+				id: "53886EBE0EBE8768"
+				item: "gtceu:advanced_infinite_driller"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 20.0d
 		}
 	]
 	title: "多方块结构"

@@ -212,11 +212,6 @@
             "required": true
         },
         {
-            "fileID": 5745343,
-            "projectID": 1104310,
-            "required": true
-        },
-        {
             "fileID": 5315928,
             "projectID": 976858,
             "required": true
@@ -330,5 +325,5 @@
     },
     "name": "GregTech Leisure",
     "overrides": ".minecraft",
-    "version": "1.4.3.1"
+    "version": "1.4.4.0"
 }

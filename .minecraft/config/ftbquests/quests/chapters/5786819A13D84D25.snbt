@@ -504,13 +504,17 @@
 			]
 			description: [
 				"如果你很富有，可以制作一个，这台机器只有OpV以后阶段才有专用配方"
+				""
 				"可以直接使用大输入总线来输入物品了"
 				"注意无论是否需要研究都必须连接数据库"
 				"拓展模块主机安装在超时空主机的左右2侧间距2格的地方"
 				"即拓展模块尾部的方块正好与超时空结构方块重合"
-				"{image:ftbquests:textures/picture/001.png width:192 height108 align:center}"
+				""
+				"拓展主机||分子机械方块||分子机械方块||主机||分子机械方块||分子机械方块||拓展主机"
+				"{image:ftbquests:textures/picture/001.png width:300 height:200 align:center}"
 			]
 			id: "72B80ADFE77198DD"
+			min_width: 350
 			shape: "rsquare"
 			size: 2.0d
 			tasks: [{

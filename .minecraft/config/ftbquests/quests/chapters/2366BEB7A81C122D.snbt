@@ -10,8 +10,8 @@
 		{
 			id: "23C44004B0D7572C"
 			linked_quest: "73C70C42B7EF5D4F"
-			x: 0.0d
-			y: 6.0d
+			x: 2.0d
+			y: 2.0d
 		}
 		{
 			id: "3F71D8E597D26019"
@@ -172,8 +172,8 @@
 				item: "kubejs:bioware_mainframe"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 8.0d
+			x: 10.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["035C470213E8B4DB"]
@@ -236,7 +236,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 10.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -308,7 +308,6 @@
 		{
 			dependencies: ["7A7C73D046390488"]
 			description: ["去巴纳德C用集气室搜集"]
-			hide_dependency_lines: true
 			id: "12F8275FC06FCFEE"
 			tasks: [{
 				id: "3B3096FCBB8D2FE6"
@@ -363,8 +362,8 @@
 				}
 			]
 			title: "山铜与秘银"
-			x: 4.0d
-			y: 2.0d
+			x: 0.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -385,6 +384,7 @@
 			dependencies: [
 				"1FA9E56114BFABF5"
 				"2802E34A99CE1D79"
+				"776563C5BA327495"
 			]
 			description: ["这是T8火箭，解锁巴纳德C"]
 			id: "7A7C73D046390488"
@@ -448,17 +448,6 @@
 		}
 		{
 			dependencies: ["1DFC7DC123A3D830"]
-			id: "41C7A298C421C65D"
-			tasks: [{
-				id: "113219BE64EFCAB0"
-				item: "gtceu:mega_blast_furnace"
-				type: "item"
-			}]
-			x: 10.5d
-			y: 3.5d
-		}
-		{
-			dependencies: ["1DFC7DC123A3D830"]
 			id: "4500AC22EE5C09F0"
 			shape: "rsquare"
 			size: 1.0d
@@ -487,17 +476,6 @@
 			}]
 			x: 12.0d
 			y: 4.0d
-		}
-		{
-			dependencies: ["1DFC7DC123A3D830"]
-			id: "237F6A0B77986D56"
-			tasks: [{
-				id: "2E4DE5399833ED46"
-				item: "gtceu:mega_alloy_blast_smelter"
-				type: "item"
-			}]
-			x: 10.5d
-			y: 4.5d
 		}
 		{
 			dependencies: ["6D83BAAC7DB34D51"]
@@ -617,7 +595,7 @@
 			y: 12.0d
 		}
 		{
-			dependencies: ["7C23CC6ADDC33EA0"]
+			dependencies: ["0A2D46609F5C3CAB"]
 			description: ["大硅岩~~狠狠发电~~"]
 			id: "09E013C97E05C052"
 			tasks: [{
@@ -625,7 +603,7 @@
 				item: "gtceu:large_naquadah_reactor"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 4.0d
 			y: 2.0d
 		}
 	]

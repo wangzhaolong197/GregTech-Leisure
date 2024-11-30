@@ -126,6 +126,7 @@
 		}
 		{
 			dependencies: ["118FDF6D9F868002"]
+			description: ["在有三钛线圈前不能直接烧制，靠聚变出的液态铕固化获得"]
 			id: "52DF531AFB3A07CE"
 			tasks: [{
 				id: "102F17C54DB17FBD"
@@ -357,7 +358,6 @@
 		{
 			dependencies: [
 				"4BFA114E12BCB163"
-				"076BD82842C349A3"
 				"6B71EE1A869ABCD5"
 				"7F8C2ECC7CE2BF20"
 			]

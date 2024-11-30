@@ -382,7 +382,7 @@ ServerEvents.recipes((event) => {
     gtr.assembler("kubejs:fishbig_rleg")
         .itemInputs("64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric",
             "64x kubejs:fishbig_fabric", "64x gtceu:max_buffer", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric")
+            "64x kubejs:fishbig_fabric", "64x gtmthings:creative_laser_hatch", "64x kubejs:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
         .itemOutputs("kubejs:fishbig_rleg")
         .duration(200)
@@ -392,7 +392,7 @@ ServerEvents.recipes((event) => {
     gtr.assembler("kubejs:fishbig_lleg")
         .itemInputs("64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame",
             "64x kubejs:fishbig_fabric", "64x gtceu:max_buffer", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric")
+            "64x kubejs:fishbig_fabric", "64x gtceu:creative_data_access_hatch", "64x kubejs:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
         .itemOutputs("kubejs:fishbig_lleg")
         .duration(200)
@@ -402,7 +402,7 @@ ServerEvents.recipes((event) => {
     gtr.assembler("kubejs:fishbig_rhand")
         .itemInputs("64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric",
             "64x kubejs:fishbig_fabric", "64x gtlcore:component_assembly_line_casing_max", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric")
+            "64x kubejs:fishbig_fabric", "64x gtmthings:creative_laser_hatch", "64x kubejs:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
         .itemOutputs("kubejs:fishbig_rhand")
         .duration(200)
@@ -412,7 +412,7 @@ ServerEvents.recipes((event) => {
     gtr.assembler("kubejs:fishbig_lhand")
         .itemInputs("64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame",
             "64x kubejs:fishbig_fabric", "64x gtlcore:component_assembly_line_casing_max", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric")
+            "64x kubejs:fishbig_fabric", "64x gtceu:creative_data_access_hatch", "64x kubejs:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
         .itemOutputs("kubejs:fishbig_lhand")
         .duration(200)

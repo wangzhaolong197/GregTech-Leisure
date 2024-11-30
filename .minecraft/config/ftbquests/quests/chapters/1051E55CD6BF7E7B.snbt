@@ -329,9 +329,12 @@
 				"恭喜你完成了这个游戏，感谢你的游玩。"
 				""
 				""
-				"续作     "
+				"续作"
 				"格雷科技：新征程[GergTech:Odyssey]"
 				"锐意开发中，敬请期待。"
+				""
+				"续作"
+               	"格雷科技：休闲版-社区版[GregTech:Leisure-Community-Edition]"
 			]
 			hide: true
 			icon: "gtlcore:ultimate_tea"
